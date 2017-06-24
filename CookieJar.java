@@ -17,4 +17,8 @@ class CookieJar {
     return cookieCount == 0;
   }
 
+  public String getCookieType() {
+    return cookieType;
+  }
+
 }
