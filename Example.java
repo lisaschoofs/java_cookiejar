@@ -4,7 +4,7 @@ public class Example {
 
   System.out.println("Let's add a new cookie jar!");
   CookieJar jar = new CookieJar ("Chocolate Chip");
-  System.out.println("The cookies are %s. %n", jar.getCookieType());
+  // System.out.println("The cookies are %s. %n", jar.getCookieType());
 
   if (jar.isEmpty()) {
     System.out.println("Bad news... the cookie jar is empty!");
@@ -15,6 +15,16 @@ public class Example {
 
   if(!jar.isEmpty()) {
     System.out.println("The cookie jar is FULL of cookies!");
+  }
+
+  if (!jar.isEmpty()) {
+  System.out.println("Dispenser is full");
+  }
+  while (jar.dispense()) {
+    System.out.println("Chomp!");
+  }
+  if (jar.isEmpty()){
+   System.out.println("The cookies are gone!");
   }
 
   }

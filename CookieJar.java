@@ -9,7 +9,7 @@ class CookieJar {
     cookieCount = 0;
   }
 
-  public void fill (){
+  public void fill(){
     cookieCount = MAX_COOKIES;
   }
 
@@ -21,4 +21,12 @@ class CookieJar {
     return cookieType;
   }
 
+  public boolean dispense() {
+    boolean wasDispensed = false;
+    if (!isEmpty()) {
+      cookieCount--;
+      wasDispensed = true;
+    }
+    return wasDispensed;
+  }
 }
