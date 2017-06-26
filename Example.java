@@ -27,5 +27,13 @@ public class Example {
    System.out.println("The cookies are gone!");
   }
 
+  jar.fill(6);
+  while (jar.dispense()) {
+    System.out.println("Chomp!");
+  }
+  if (jar.isEmpty()){
+   System.out.println("The cookies are gone!");
+  }
+
   }
 }

@@ -10,7 +10,11 @@ class CookieJar {
   }
 
   public void fill(){
-    cookieCount = MAX_COOKIES;
+     fill(MAX_COOKIES);
+  }
+
+  public void fill(int cookies) {
+    cookieCount += cookies;
   }
 
   public boolean isEmpty(){
