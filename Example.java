@@ -35,5 +35,11 @@ public class Example {
    System.out.println("The cookies are gone!");
   }
 
+  try{
+    jar.fill(132);
+  } catch (IllegalArgumentException iae) {
+    System.out.printf("The error was %s. %n", iae.getMessage());
+  }
+
   }
 }

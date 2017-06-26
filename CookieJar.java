@@ -14,7 +14,11 @@ class CookieJar {
   }
 
   public void fill(int cookies) {
-    cookieCount += cookies;
+    int newAmount = cookieCount + cookies;
+    if (newAmount > MAX_COOKIES) {
+      throw new IllegalArgumentException("Too many cookies for the cookie jar!");
+    }
+    cookieCount = newAmount;
   }
 
   public boolean isEmpty(){
